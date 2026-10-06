@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MZ Technologies | Digital Solutions & AI</title>
+
+<meta name="description" content="MZ Technologies builds modern websites, web applications, mobile apps, AI automation and digital solutions.">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#070b14;
+    color:#fff;
+    line-height:1.6;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+/* NAVBAR */
+
+header{
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index:1000;
+    background:rgba(7,11,20,.92);
+    backdrop-filter:blur(12px);
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.navbar{
+    min-height:72px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    font-size:25px;
+    font-weight:800;
+    letter-spacing:.5px;
+}
+
+.logo span{
+    color:#4da3ff;
+}
+
+.nav-links{
+    display:flex;
+    gap:28px;
+    list-style:none;
+}
+
+.nav-links a{
+    color:#dce7f7;
+    font-size:15px;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#4da3ff;
+}
+
+.menu-btn{
+    display:none;
+    font-size:28px;
+    cursor:pointer;
+}
+
+/* HERO */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    padding-top:100px;
+    position:relative;
+    overflow:hidden;
+}
+
+.hero:before{
+    content:"";
+    position:absolute;
+    width:450px;
+    height:450px;
+    background:#1769aa;
+    filter:blur(160px);
+    opacity:.25;
+    top:10%;
+    left:-10%;
+}
+
+.hero:after{
+    content:"";
+    position:absolute;
+    width:400px;
+    height:400px;
+    background:#6c2cff;
+    filter:blur(160px);
+    opacity:.18;
+    right:-10%;
+    bottom:0;
+}
+
+.hero-content{
+    max-width:800px;
+    position:relative;
+    z-index:2;
+}
+
+.badge{
+    display:inline-block;
+    padding:8px 15px;
+    border:1px solid rgba(77,163,255,.4);
+    border-radius:30px;
+    color:#7dbaff;
+    background:rgba(77,163,255,.08);
+    margin-bottom:20px;
+    font-size:14px;
+}
+
+.hero h1{
+    font-size:clamp(42px,7vw,78px);
+    line-height:1.05;
+    margin-bottom:22px;
+}
+
+.hero h1 span{
+    color:#4da3ff;
+}
+
+.hero p{
+    color:#aebbd0;
+    font-size:19px;
+    max-width:680px;
+    margin-bottom:32px;
+}
+
+.buttons{
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 25px;
+    border-radius:9px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn-primary{
+    background:#1677d2;
+}
+
+.btn-primary:hover{
+    transform:translateY(-3px);
+    background:#238be8;
+}
+
+.btn-secondary{
+    border:1px solid #33445d;
+    color:#dce7f7;
+}
+
+.btn-secondary:hover{
+    background:#111b2c;
+}
+
+/* GENERAL */
+
+section{
+    padding:100px 0;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:55px;
+}
+
+.section-title .small{
+    color:#4da3ff;
+    font-size:14px;
+    font-weight:bold;
+    text-transform:uppercase;
+    letter-spacing:2px;
+}
+
+.section-title h2{
+    font-size:40px;
+    margin:10px 0;
+}
+
+.section-title p{
+    max-width:650px;
+    margin:auto;
+    color:#98a8bf;
+}
+
+/* SERVICES */
+
+.services-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.card{
+    background:#0d1422;
+    border:1px solid #1d2a3e;
+    border-radius:16px;
+    padding:30px;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-7px);
+    border-color:#267dcc;
+}
+
+.icon{
+    width:55px;
+    height:55px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:12px;
+    background:#12263e;
+    font-size:26px;
+    margin-bottom:20px;
+}
+
+.card h3{
+    margin-bottom:10px;
+    font-size:21px;
+}
+
+.card p{
+    color:#93a2b8;
+    font-size:15px;
+}
+
+/* ABOUT */
+
+.about{
+    background:#0a101c;
+}
+
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+}
+
+.about h2{
+    font-size:40px;
+    margin:12px 0 20px;
+}
+
+.about p{
+    color:#9caac0;
+    margin-bottom:18px;
+}
+
+.check-list{
+    list-style:none;
+}
+
+.check-list li{
+    margin:13px 0;
+    color:#dce7f7;
+}
+
+.check-list li::before{
+    content:"✓";
+    color:#4da3ff;
+    font-weight:bold;
+    margin-right:10px;
+}
+
+.about-box{
+    background:linear-gradient(145deg,#101d30,#0b111c);
+    border:1px solid #26364e;
+    border-radius:20px;
+    padding:40px;
+}
+
+.about-box h3{
+    font-size:28px;
+    margin-bottom:15px;
+}
+
+.stats{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+    margin-top:25px;
+}
+
+.stat{
+    padding:20px;
+    border-radius:12px;
+    background:#111c2d;
+}
+
+.stat strong{
+    display:block;
+    font-size:27px;
+    color:#4da3ff;
+}
+
+.stat span{
+    color:#9aa9bd;
+    font-size:14px;
+}
+
+/* PROJECTS */
+
+.projects{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.project{
+    min-height:230px;
+    padding:28px;
+    border-radius:16px;
+    border:1px solid #1d2a3e;
+    background:linear-gradient(145deg,#101a2a,#0b111c);
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+}
+
+.project .tag{
+    color:#67b1ff;
+    font-size:13px;
+    margin-bottom:8px;
+}
+
+.project h3{
+    font-size:22px;
+    margin-bottom:8px;
+}
+
+.project p{
+    color:#96a5b9;
+    font-size:14px;
+}
+
+/* PROCESS */
+
+.process{
+    background:#0a101c;
+}
+
+.process-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.process-card{
+    text-align:center;
+    padding:25px;
+}
+
+.number{
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    background:#1677d2;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin:0 auto 18px;
+    font-weight:bold;
+}
+
+.process-card p{
+    color:#96a5b9;
+    font-size:14px;
+}
+
+/* CTA */
+
+.cta{
+    text-align:center;
+}
+
+.cta-box{
+    padding:65px 25px;
+    border-radius:22px;
+    background:linear-gradient(135deg,#10294a,#11182a);
+    border:1px solid #24486d;
+}
+
+.cta h2{
+    font-size:40px;
+    margin-bottom:15px;
+}
+
+.cta p{
+    color:#a5b4c8;
+    max-width:650px;
+    margin:0 auto 28px;
+}
+
+/* CONTACT */
+
+.contact{
+    background:#0a101c;
+}
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+}
+
+.contact-info,
+.contact-form{
+    background:#0d1422;
+    border:1px solid #1d2a3e;
+    padding:30px;
+    border-radius:16px;
+}
+
+.contact-item{
+    margin:20px 0;
+}
+
+.contact-item strong{
+    display:block;
+    color:#fff;
+}
+
+.contact-item span{
+    color:#94a5bb;
+}
+
+form input,
+form textarea{
+    width:100%;
+    padding:14px;
+    margin-bottom:15px;
+    border-radius:8px;
+    border:1px solid #26364e;
+    background:#080e18;
+    color:#fff;
+    outline:none;
+}
+
+form textarea{
+    min-height:130px;
+    resize:vertical;
+}
+
+form input:focus,
+form textarea:focus{
+    border-color:#287dcc;
+}
+
+form button{
+    border:none;
+    cursor:pointer;
+    width:100%;
+}
+
+/* FOOTER */
+
+footer{
+    padding:35px 0;
+    border-top:1px solid #182437;
+    background:#060a11;
+}
+
+.footer-content{
+    display:flex;
+    justify-content:space-between;
+    gap:20px;
+    align-items:center;
+}
+
+footer p{
+    color:#75859b;
+    font-size:14px;
+}
+
+.social{
+    display:flex;
+    gap:15px;
+    color:#9cafc6;
+}
+
+/* WHATSAPP */
+
+.whatsapp{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    width:58px;
+    height:58px;
+    border-radius:50%;
+    background:#20c76b;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:27px;
+    z-index:999;
+    box-shadow:0 5px 25px rgba(0,0,0,.4);
+}
+
+/* MOBILE */
+
+@media(max-width:850px){
+
+    .menu-btn{
+        display:block;
+    }
+
+    .nav-links{
+        position:absolute;
+        top:72px;
+        left:0;
+        width:100%;
+        background:#080d16;
+        flex-direction:column;
+        gap:0;
+        display:none;
+        border-bottom:1px solid #1c293b;
+    }
+
+    .nav-links.active{
+        display:flex;
+    }
+
+    .nav-links li{
+        padding:16px 5%;
+        border-top:1px solid #182334;
+    }
+
+    .services-grid,
+    .projects{
+        grid-template-columns:1fr;
+    }
+
+    .about-grid,
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+
+    .process-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .hero h1{
+        font-size:45px;
+    }
+
+    .hero p{
+        font-size:17px;
+    }
+
+    .section-title h2,
+    .about h2,
+    .cta h2{
+        font-size:32px;
+    }
+
+    .footer-content{
+        flex-direction:column;
+        text-align:center;
+    }
+}
+
+@media(max-width:500px){
+
+    .process-grid{
+        grid-template-columns:1fr;
+    }
+
+    .buttons{
+        flex-direction:column;
+    }
+
+    .btn{
+        text-align:center;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="container navbar">
+
+<a href="#home" class="logo">MZ <span>Technologies</span></a>
+
+<div class="menu-btn" onclick="toggleMenu()">☰</div>
+
+<ul class="nav-links" id="navLinks">
+<li><a href="#home" onclick="closeMenu()">Home</a></li>
+<li><a href="#services" onclick="closeMenu()">Services</a></li>
+<li><a href="#about" onclick="closeMenu()">About</a></li>
+<li><a href="#projects" onclick="closeMenu()">Projects</a></li>
+<li><a href="#contact" onclick="closeMenu()">Contact</a></li>
+</ul>
+
+</div>
+</header>
+
+
+<main>
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+<div class="container">
+<div class="hero-content">
+
+<div class="badge">Digital Solutions • AI • Software</div>
+
+<h1>
+We Build <span>Digital Products</span> That Matter.
+</h1>
+
+<p>
+MZ Technologies creates modern websites, powerful web applications,
+mobile solutions, AI automation and custom software for businesses.
+</p>
+
+<div class="buttons">
+<a href="#contact" class="btn btn-primary">Start a Project</a>
+<a href="#services" class="btn btn-secondary">Explore Services</a>
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- SERVICES -->
+
+<section id="services">
+<div class="container">
+
+<div class="section-title">
+<div class="small">What We Do</div>
+<h2>Our Technology Services</h2>
+<p>
+Complete digital solutions designed to help businesses grow,
+automate and compete in the modern digital world.
+</p>
+</div>
+
+<div class="services-grid">
+
+<div class="card">
+<div class="icon">🌐</div>
+<h3>Web Development</h3>
+<p>
+Modern, responsive and high-performance business websites,
+landing pages and web applications.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">📱</div>
+<h3>Mobile Apps</h3>
+<p>
+User-friendly mobile applications designed for modern Android
+and cross-platform experiences.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">🤖</div>
+<h3>AI & Automation</h3>
+<p>
+AI-powered tools, intelligent workflows, chatbots and business
+automation solutions.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">💻</div>
+<h3>Custom Software</h3>
+<p>
+Custom software solutions built around your company's specific
+business requirements.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">🗄️</div>
+<h3>Backend & Databases</h3>
+<p>
+Secure APIs, databases, authentication and reliable backend
+systems for digital products.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">🔐</div>
+<h3>Cybersecurity</h3>
+<p>
+Security-focused development practices to protect applications,
+accounts and business data.
+</p>
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- ABOUT -->
+
+<section class="about" id="about">
+<div class="container">
+
+<div class="about-grid">
+
+<div>
+<div class="section-title" style="text-align:left;margin-bottom:20px;">
+<div class="small">About MZ Technologies</div>
+<h2>Technology Built Around Your Goals</h2>
+</div>
+
+<p>
+MZ Technologies is a digital technology company focused on
+building useful, modern and scalable software solutions.
+</p>
+
+<p>
+We combine modern development practices with AI and automation
+to help businesses improve their digital presence and workflows.
+</p>
+
+<ul class="check-list">
+<li>Modern & responsive development</li>
+<li>AI-powered solutions</li>
+<li>Secure architecture</li>
+<li>Business-focused technology</li>
+<li>Scalable digital products</li>
+</ul>
+</div>
+
+<div class="about-box">
+<h3>Why MZ Technologies?</h3>
+<p>
+We don't just create websites. We build technology that can
+grow with your business.
+</p>
+
+<div class="stats">
+<div class="stat">
+<strong>6+</strong>
+<span>Technology Services</span>
+</div>
+
+<div class="stat">
+<strong>24/7</strong>
+<span>Digital Possibilities</span>
+</div>
+
+<div class="stat">
+<strong>AI</strong>
+<span>Modern Automation</span>
+</div>
+
+<div class="stat">
+<strong>100%</strong>
+<span>Custom Approach</span>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- PROJECTS -->
+
+<section id="projects">
+<div class="container">
+
+<div class="section-title">
+<div class="small">Our Work</div>
+<h2>Projects & Solutions</h2>
+<p>
+Examples of the digital products and solutions MZ Technologies
+can build.
+</p>
+</div>
+
+<div class="projects">
+
+<div class="project">
+<div class="tag">WEB DEVELOPMENT</div>
+<h3>Business Websites</h3>
+<p>Professional websites for companies, shops and startups.</p>
+</div>
+
+<div class="project">
+<div class="tag">AI SOLUTION</div>
+<h3>AI Automation</h3>
+<p>Intelligent tools that automate repetitive business tasks.</p>
+</div>
+
+<div class="project">
+<div class="tag">SOFTWARE</div>
+<h3>Custom Web Apps</h3>
+<p>Business applications designed around specific workflows.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- PROCESS -->
+
+<section class="process">
+<div class="container">
+
+<div class="section-title">
+<div class="small">Our Process</div>
+<h2>How We Work</h2>
+<p>
+A simple process for turning an idea into a digital product.
+</p>
+</div>
+
+<div class="process-grid">
+
+<div class="process-card">
+<div class="number">01</div>
+<h3>Discover</h3>
+<p>Understand the business, problem and project requirements.</p>
+</div>
+
+<div class="process-card">
+<div class="number">02</div>
+<h3>Design</h3>
+<p>Create the structure, user experience and visual direction.</p>
+</div>
+
+<div class="process-card">
+<div class="number">03</div>
+<h3>Build</h3>
+<p>Develop the product using modern technology and best practices.</p>
+</div>
+
+<div class="process-card">
+<div class="number">04</div>
+<h3>Launch</h3>
+<p>Test, deploy and prepare the product for real users.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- CTA -->
+
+<section class="cta">
+<div class="container">
+
+<div class="cta-box">
+<h2>Have an Idea?</h2>
+
+<p>
+Let's turn your idea into a professional digital product with
+modern technology, automation and AI.
+</p>
+
+<a href="#contact" class="btn btn-primary">Let's Build Together</a>
+</div>
+
+</div>
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+<div class="container">
+
+<div class="section-title">
+<div class="small">Contact</div>
+<h2>Let's Talk About Your Project</h2>
+<p>
+Tell us what you want to build and we'll help you plan the next step.
+</p>
+</div>
+
+<div class="contact-grid">
+
+<div class="contact-info">
+
+<h3>MZ Technologies</h3>
+
+<div class="contact-item">
+<strong>📧 Email</strong>
+<span>hello@mztechnologies.com</span>
+</div>
+
+<div class="contact-item">
+<strong>📱 Phone</strong>
+<span>+92 300 0000000</span>
+</div>
+
+<div class="contact-item">
+<strong>📍 Location</strong>
+<span>Lahore, Pakistan</span>
+</div>
+
+</div>
+
+
+<div class="contact-form">
+
+<form onsubmit="sendMessage(event)">
+
+<input type="text" id="name" placeholder="Your Name" required>
+
+<input type="email" id="email" placeholder="Your Email" required>
+
+<input type="text" id="subject" placeholder="Project Subject" required>
+
+<textarea id="message" placeholder="Tell us about your project..." required></textarea>
+
+<button class="btn btn-primary" type="submit">
+Send Message
+</button>
+
+</form>
+
+</div>
+
+</div>
+</div>
+</section>
+
+</main>
+
+
+<!-- FOOTER -->
+
+<footer>
+<div class="container footer-content">
+
+<p>© 2026 MZ Technologies. All rights reserved.</p>
+
+<div class="social">
+<a href="#home">LinkedIn</a>
+<a href="#home">Instagram</a>
+<a href="#home">Facebook</a>
+</div>
+
+</div>
+</footer>
+
+
+<!-- WHATSAPP -->
+
+<a class="whatsapp"
+href="https://wa.me/923000000000"
+target="_blank"
+aria-label="WhatsApp">
+💬
+</a>
+
+
+<script>
+
+function toggleMenu(){
+    document.getElementById("navLinks").classList.toggle("active");
+}
+
+function closeMenu(){
+    document.getElementById("navLinks").classList.remove("active");
+}
+
+function sendMessage(event){
+    event.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const subject = document.getElementById("subject").value;
+    const message = document.getElementById("message").value;
+
+    const phone = "923000000000";
+
+    const text =
+        "Hello MZ Technologies,%0A%0A" +
+        "Name: " + encodeURIComponent(name) + "%0A" +
+        "Subject: " + encodeURIComponent(subject) + "%0A" +
+        "Message: " + encodeURIComponent(message);
+
+    window.open(
+        "https://wa.me/" + phone + "?text=" + text,
+        "_blank"
+    );
+}
+
+</script>
+
+</body>
+</html>
