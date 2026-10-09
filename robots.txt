@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://malikzahid78.github.io/mz-technologies/sitemap.xml
